@@ -1,0 +1,58 @@
+@charset "utf-8";
+// ===================================================================
+// mixinやらCSS3やら、extendも。
+// ===================================================================
+@mixin media_retina() {
+  @media only screen and (min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+}
+
+
+@function get_vw($size, $viewport){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size:10, $viewport:1140){
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size,$viewport);
+}
+
+@mixin font_size($min, $max) {
+  font-size: str-slice(#{($max/10)}, 1, str-index(#{($max/10)}, px)-1)+(rem);
+
+  @media only screen and (max-width: 1599px) {
+    font-size: smooth_font($min, $max);
+  }
+
+  @media only screen and (max-width: 374px) {
+    font-size: str-slice(#{($min/10)}, 1, str-index(#{($min/10)}, px)-1)+(rem);
+  }
+}
+
+//中央配置
+
+@mixin centering($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if $horizontal and $vertical {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if $horizontal {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if $vertical {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+// 余白調整用のクラス
+@for $i from 0 through 20 {
+  .u-mt#{$i * 5} { margin-top: 5px * $i !important; }
+  .u-mb#{$i * 5} { margin-bottom: 5px * $i !important; }
+  .u-pt#{$i * 5} { padding-top: 5px * $i !important; }
+  .u-pb#{$i * 5} { padding-bottom: 5px * $i !important; }
+}
+

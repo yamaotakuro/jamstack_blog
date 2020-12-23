@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+.u-list{
+	padding-left: 20px;
+	list-style-type: disc;
+}
+
+.u-list02{
+	li{
+		position: relative;
+		padding-left: 20px;
+		&::before{
+			content: "・";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.u-ico{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.u-center {
+	text-align: center;
+}
+
+// img Centering
+.u-block_center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// text-align: right
+.u-right {
+	text-align: right;
+}
+
+.u-flex{
+	display: flex;
+}
+
+.u-none{
+	display: none;
+}
+
+.u-visible_sp{
+	display: none;
+}
+.u-visible_pc{
+	display: block;
+}
+
+
+/* スマホ
+-------------------------------------------------- */
+@media only screen and (max-width:$screen-sp) {
+	.u-visible_sp{
+		display: block;
+	}
+	.u-visible_pc{
+		display: none;
+	}
+}

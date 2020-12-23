@@ -1,0 +1,33 @@
+@charset "utf-8";
+.c-ttl01{
+  text-align: center;
+  margin-bottom: 30px;
+  color: #444;
+  font-size: smooth_font(25px , 30px);
+  font-weight: 400;
+  .en{
+    font-size: smooth_font(15px , 18px);
+    display: block;
+    color: #999;
+  }
+}
+
+.c-ttl02{
+  color: #707070;
+  font-size: smooth_font(16px , 20px);
+  font-weight: 400;
+}
+
+
+/* PC(small)
+-------------------------------------------------- */
+@media only screen and (min-width:$screen-sp + 1) and (max-width:$screen-md) {
+
+}
+
+
+/* スマホ
+-------------------------------------------------- */
+@media only screen and (max-width:$screen-sp) {
+
+}

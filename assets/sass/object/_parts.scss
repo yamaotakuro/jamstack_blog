@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.c-container{
+	width:$base_width;
+	margin:0 auto;
+	padding:0 15px;
+}
+
+/* PC(small)
+-------------------------------------------------- */
+@media only screen and (min-width:$screen-sp + 1) and (max-width:$screen-md) {
+
+}
+
+
+/* スマホ
+-------------------------------------------------- */
+@media only screen and (max-width:$screen-sp) {
+  .c-table-responsive{
+		width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+		tbody{
+			width: auto;
+			position: relative;
+			overflow-x: auto;
+			white-space: nowrap;
+		}
+		tr{
+      vertical-align: top;
+		}
+  }
+  .c-table-responsive2{
+		tr,th,td{
+			display: block;
+		}
+  }
+  .c-crumbs{
+    overflow-x: scroll;
+    white-space: nowrap;
+	}
+}

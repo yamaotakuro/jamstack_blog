@@ -1,0 +1,32 @@
+@charset "utf-8";
+// ===================================================================
+// foundationのインポート
+// ===================================================================
+
+// リセット
+@import "foundation/_reset";
+
+// 変数
+@import "foundation/_variable";
+
+// 関数
+@import "foundation/_function";
+
+// ミックスイン
+@import "foundation/_mixin";
+
+// ベース
+@import "foundation/_base";
+
+// タイトル
+@import "object/_ttl";
+
+// ボタン
+@import "object/_btn";
+
+// パーツ
+@import "object/_parts";
+
+// ユーティリティー
+@import "object/_utility";
+
