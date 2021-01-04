@@ -29,5 +29,15 @@
 /* スマホ
 -------------------------------------------------- */
 @media only screen and (max-width:$screen-sp) {
-
+  .c-ttl01{
+    font-size: smooth_font(20px , 24px);
+    .en{
+      font-size: smooth_font(14px , 16px);
+    }
+  }
+  
+  .c-ttl02{
+    font-size: smooth_font(15px , 18px);
+  }
+  
 }

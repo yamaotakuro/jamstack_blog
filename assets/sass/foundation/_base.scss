@@ -5,16 +5,13 @@ html{
 }
 
 body {
+	position: relative;
+	overflow: hidden;
 	color: $font_color;
 	font-family: $base_font;
 	-webkit-text-size-adjust:100%;
 	font-size: smooth_font(13px, 15px);
-	
-}
-
-#page {
-	position: relative;
-	overflow: hidden;
+	min-height: 100vh;
 }
 
 

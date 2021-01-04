@@ -13,11 +13,27 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.p-kv{
+  background: #f5f5f5;
+  padding: smooth_size(30px , 50px);
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  &__copy{
+    font-size: smooth_size(30px , 34px);
+  }
+}
+/* スマホ
+-------------------------------------------------- */
+@media only screen and (max-width:$screen-sp) {
   .p-kv{
-    background: #f5f5f5;
-    padding: smooth_size(100px , 120px);
+    padding: smooth_size(40px , 50px) smooth_size(10px , 20px);
+    min-height: 250px;
     &__copy{
-      font-size: smooth_size(30px , 34px);
+      font-size: smooth_size(18px , 22px);
     }
   }
+}
 </style>
